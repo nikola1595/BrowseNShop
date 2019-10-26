@@ -1,0 +1,28 @@
+﻿@using BrowseNShop.Models
+@model IEnumerable<Sneaker>
+
+
+
+<div>
+    <h2>All sneakers and boots are displayed here </h2>
+</div>
+
+@{ 
+    foreach (var sneak in Model)
+    {
+        <div>
+            <h4> Sneaker name: @sneak.Name</h4>
+            <p>Price: @sneak.Price $</p>
+
+
+
+        </div>
+    }
+}
+
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}

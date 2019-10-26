@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BrowseNShop.Interfaces
 {
-    interface ISneakerRepository
+    public interface ISneakerRepository
     {
         IEnumerable<Sneaker> Sneakers { get; }
         IEnumerable<Sneaker> PreferredSneakers { get; }
