@@ -15,8 +15,8 @@ namespace BrowseNShop.Mocks
             {
                 return new List<Category>
                 {
-                    new Category { CategoryName = "Summer Collection", Description = "All summer clothes"},
-                    new Category { CategoryName = "Winter Collection", Description = "All winter clothes"}
+                    new Category { CategoryName = "Summer Collection", Description = "All summer sneakers"},
+                    new Category { CategoryName = "Winter Collection", Description = "All winter sneakers"}
                 };
 
             }

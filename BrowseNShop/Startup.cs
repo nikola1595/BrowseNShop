@@ -12,6 +12,8 @@ using Microsoft.EntityFrameworkCore;
 using BrowseNShop.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using BrowseNShop.Interfaces;
+using BrowseNShop.Mocks;
 
 namespace BrowseNShop
 {
@@ -27,6 +29,10 @@ namespace BrowseNShop
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            /**/
+            services.AddTransient<ISneakerRepository, MockSneakerRepository>();
+            services.AddTransient<ICategoryRepository, MockCategoryRepository>();
+
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
