@@ -1,5 +1,5 @@
-﻿@using BrowseNShop.Models
-@model IEnumerable<Sneaker>
+﻿@using BrowseNShop.ViewModels
+@model SneakerListViewModel
 
 
 
@@ -7,8 +7,10 @@
     <h2>All sneakers and boots are displayed here </h2>
 </div>
 
+<h2>@Model.CurrentCategory</h2>
+
 @{ 
-    foreach (var sneak in Model)
+    foreach (var sneak in Model.Sneakers)
     {
         <div>
             <h4> Sneaker name: @sneak.Name</h4>
