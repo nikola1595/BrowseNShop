@@ -27,12 +27,12 @@ namespace BrowseNShop.Mocks
                         ImageUrl = "https://nb.scene7.com/is/image/NB/m9919ec_nb_02_i?$pdpPictExp$",
                         InStock = true,
                         IsPreferred = true,
-                        ImageThumbnailUrl = "https://nb.scene7.com/is/image/NB/m9919ec_nb_03_i?$pdpThumbPict2x$&extend=10,10,10,10&fmt=webp"
+                        ImageThumbnailUrl = "https://i8.amplience.net/i/jpl/hp_203202_a?w=175&h=175&qlt=80&w=300&h=300&v=1"
                     },
 
                     new Sneaker
                     {
-                        Name = "Nike Air Max 270 React ‘Bauhaus’",
+                        Name = "Nike Air Max 270 React",
                         Price = 139,
                         ShortDescription = "Air Max 270",
                         LongDescription = "Nike’s Air Max 270 was an instant hit when it first emerged last year but it’s futuristic look wasn’t for everyone and die-hard sneakerheads, in particular, have struggled to get onboard. That all changed this summer with the release of the Air Max 270 React. The addition of an ultra-springy React sole and two retro-inspired ‘Bauhaus’ colourways have opened the 270 up to a more discerning audience. One of the best colour palettes we’ve seen in 2019, for sure.",
@@ -40,49 +40,49 @@ namespace BrowseNShop.Mocks
                         ImageUrl = "https://media.endclothing.com/media/catalog/product/1/9/19-06-2019_nike_airmax270react_phantomgolduniversityred_ao4971-002_aj_1.jpg",
                         InStock = true,
                         IsPreferred = true,
-                        ImageThumbnailUrl = "https://reede.ee/media/catalog/product/cache/4/thumbnail/9df78eab33525d08d6e5fb8d27136e95/n/i/nike-air-max-270-react-bauhaus-1.jpg"
+                        ImageThumbnailUrl = "https://i.ebayimg.com/images/g/bUAAAOSwX6VdHGb9/s-l300.jpg"
                     },
 
                     new Sneaker
                     {
-                        Name = "Novesta Star Master Orange",
-                        Price = 59,
-                        ShortDescription = "Hardly new brand but some colour inovations",
-                        LongDescription = "The existence of Novesta’s canvas Star Master pump is hardly breaking news in the world of footwear. What is new, however, is a fresh crop of summer-friendly colourways, perfect for brightening up beer gardens while the nice weather lasts. Orange has been trending hard for some time now and it’s still a solid option for adding a dash of personality to proceedings.So strap into a pair of these bad boys, teamed with white socks, shorts and a Cuban collar shirt, and tackle BBQ season the right way.",
+                        Name = "Veja V-10",
+                        Price = 125,
+                        ShortDescription = "Veja V-10 white sneakers",
+                        LongDescription = "The minimal V-10 was originally designed to mark the brand’s 10th year but it’s been periodically updated in new colour schemes ever since. This ultra-clean white and black option is our favourite this summer.",
                         Category = _categoryRepository.Categories.First(),
-                        ImageUrl = "https://www.gonovesta.com/obrazok/star-master-84-orange-1.jpg?imageId=9929",
-                        InStock = true,
-                        IsPreferred = false,
-                        ImageThumbnailUrl = "https://cdn.shopify.com/s/files/1/1008/8852/products/VN0A38EMUKU-2_large.jpg?v=1557855852"
-                    },
-
-
-                    new Sneaker
-                    {
-                        Name = "Nike Tailwind '79",
-                        Price = 80,
-                        ShortDescription = "Sneakers rarely come with more historical clout than Nike’s Tailwind ‘79. ",
-                        LongDescription = "Originally released for the Honolulu Marathon in – oh – 1978 (think of this as the sequel), the retro beauty was the first Nike model to feature the label’s now-famous ‘Air’ cushioning technology. Today, it’s hardly at the cutting edge of tech. It is, however, still at the cutting edge of looking really good with shorts, which is why we were so pleased to be blessed with a plethora of new vibrant colourways this season.",
-                        Category = _categoryRepository.Categories.First(),
-                        ImageUrl = "https://static.fashionbeans.com/wp-content/uploads/2019/07/summersneaker-19-4.jpg",
+                        ImageUrl = "https://static.fashionbeans.com/wp-content/uploads/2019/07/summersneaker-19-6.jpg",
                         InStock = true,
                         IsPreferred = true,
-                        ImageThumbnailUrl = "https://c.static-nike.com/a/images/t_PDP_144_v1/f_auto/zdzjlme0ddovgbsock5t/air-tailwind-79-shoe-PNXmkq.jpg"
+                        ImageThumbnailUrl = "https://cdn.shopify.com/s/files/1/0094/2252/products/V10_Leather_Extra_White_Emeraude_Black_VX021670_2465_300x300.jpg?v=1568028004"
+                    },
+
+
+                    new Sneaker
+                    {
+                        Name = "LeBron 3 Houston Oilers",
+                        Price = 150,
+                        ShortDescription = "Houston stand up, and grab the LeBron 3 Houston Oilers ",
+                        LongDescription = "This LBJ 3 comes with a white upper plus blue and red accents, red Nike “Swoosh”, white midsole, and a red sole. These sneakers released in May 2019 and retailed for $175.",
+                        Category = _categoryRepository.Categories.First(),
+                        ImageUrl = "https://stockx.imgix.net/Nike-LeBron-3-Houston-Oilers-2019-Suede.png?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&q=90&trim=color&updated_at=1559141442&w=1000",
+                        InStock = true,
+                        IsPreferred = true,
+                        ImageThumbnailUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5D48SaARSOp_WE8u8BousPhDDQCzQtqodZzZmOXUnDyOU7Vpxhw&s"
 
 
                     },
 
                     new Sneaker
                     {
-                        Name = "Nike x Sacai LD Waffle",
-                        Price = 355,
-                        ShortDescription = " Nike and Sacai’s LD Waffle was unimaginably difficult to cop, yet it seems everyone is rocking a pair.",
-                        LongDescription = "This OTT sneaker mashup from the Oregonian sportswear giant and Japanese fashion renegade is truly inescapable. Thanks to a delayed release, this tricked-out kick became the most hyped shoe of 2019 and with more colourways in the pipeline, things don’t seem to be settling down anytime soon.",
+                        Name = "Adidas Alphaedge 4D",
+                        Price = 184,
+                        ShortDescription = " Adidas 4D sneakers. ",
+                        LongDescription = "The latest glimpse came in May courtesy of the Alphaedge 4D, a sleek knitted sports shoe sat atop a springy, geometric, latticed sole unit. This latest 4D release offers performance updates in the form of reinforced stress points, a Continental rubber outsole and an upper that borrows more than a little from the Alphabounce.",
                         Category = _categoryRepository.Categories.First(),
-                        ImageUrl = "https://static.fashionbeans.com/wp-content/uploads/2019/07/summersneaker-19-9.jpg",
+                        ImageUrl = "https://static.fashionbeans.com/wp-content/uploads/2019/07/summersneaker-19-10.jpg",
                         InStock = true,
                         IsPreferred = false,
-                        ImageThumbnailUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQqOrS2LiUo91rJwk0wT47Mw-GCJ6JxOHJ5JGL54S0tmpUev19&s"
+                        ImageThumbnailUrl = "https://cdn.shopify.com/s/files/1/0094/2252/products/White_EF3454_8123_300x300.jpg?v=1568024387"
 
 
                     },
@@ -98,7 +98,7 @@ namespace BrowseNShop.Mocks
                         ImageUrl = "https://images-na.ssl-images-amazon.com/images/I/91zG70PddDL._SL600_.jpg",
                         InStock = false,
                         IsPreferred = true,
-                        ImageThumbnailUrl = "https://images-na.ssl-images-amazon.com/images/I/813y2OVs-HL._AC_UL160_.jpg"
+                        ImageThumbnailUrl = "https://images-na.ssl-images-amazon.com/images/I/81RbYwVgdpL._AC_UL300_SR300,300_.jpg"
 
                     },
 
@@ -112,7 +112,7 @@ namespace BrowseNShop.Mocks
                         ImageUrl = "https://images-na.ssl-images-amazon.com/images/I/91rBIejoR%2BL._SL600_.jpg",
                         InStock = true,
                         IsPreferred = true,
-                        ImageThumbnailUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxHiu5IBmq_8aXJdisb9Gd5Ps9_sOiuNUznZxU2KybfCksNpBmtA&s"
+                        ImageThumbnailUrl = "https://i.ebayimg.com/images/g/YeIAAOSwLuxcpfRT/s-l300.jpg"
                     },
 
 
@@ -126,7 +126,7 @@ namespace BrowseNShop.Mocks
                         ImageUrl = "https://images-na.ssl-images-amazon.com/images/I/81%2BKaXWLqLL._SL600_.jpg",
                         InStock = false,
                         IsPreferred = true,
-                        ImageThumbnailUrl = "https://images-na.ssl-images-amazon.com/images/I/61nvhJD2lpL._AC_UL160_.jpg"
+                        ImageThumbnailUrl = "https://i.ebayimg.com/images/g/Q7IAAOSw-a1c526q/s-l300.jpg"
                     },
 
 
@@ -140,26 +140,25 @@ namespace BrowseNShop.Mocks
                         ImageUrl = "https://images-na.ssl-images-amazon.com/images/I/71mfGvvsXSL._UL1500_.jpg",
                         InStock = true,
                         IsPreferred = true,
-                        ImageThumbnailUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrBwOM9A3odE3UpEFM9CkkMPuq1jFk8TeErLRYniw1-9siPc3O&s"
-
-                    },
-
-
-                    new Sneaker
-                    {
-                        Name = "The North Face Tsumoru Boot",
-                        Price = 125,
-                        ShortDescription = "Best Warmth for the Money",
-                        LongDescription = "Sometimes it’s hard to get your head wrapped around the product line-up from North Face. They have a line of fashion only wear then they have their tough, outdoor gear. Sometimes it’s hard to know which is which. Luckily, most of their boots fall into that outdoor gear category and are quite good for a budget price.",
-                        Category = _categoryRepository.Categories.Last(),
-                        ImageUrl = "https://images-na.ssl-images-amazon.com/images/I/81UTKwdmdlL._SL600_.jpg",
-                        InStock = false,
-                        IsPreferred = true,
-                        ImageThumbnailUrl = "https://4.bp.blogspot.com/-E6s3W0I3cT0/Wm1RinTK4rI/AAAAAAAAbRE/dhfR4Nhod74dtTvP6YbiEtVyh4h5S72rACLcBGAs/s640/P1250288.jpg"
+                        ImageThumbnailUrl = "https://richmedia.channeladvisor.com/ImageDelivery/imageService?profileId=12013292&id=634483&recipeId=380"
+                    
                     }
 
+                    //new Sneaker
+                    //{
+                    //    Name = "The North Face Tsumoru Boot",
+                    //    Price = 125,
+                    //    ShortDescription = "Best Warmth for the Money",
+                    //    LongDescription = "Sometimes it’s hard to get your head wrapped around the product line-up from North Face. They have a line of fashion only wear then they have their tough, outdoor gear. Sometimes it’s hard to know which is which. Luckily, most of their boots fall into that outdoor gear category and are quite good for a budget price.",
+                    //    Category = _categoryRepository.Categories.Last(),
+                    //    ImageUrl = "https://images-na.ssl-images-amazon.com/images/I/81UTKwdmdlL._SL600_.jpg",
+                    //    InStock = false,
+                    //    IsPreferred = true,
+                    //    ImageThumbnailUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjbq5SFTSZzL9hC43-Pa3Qd1OXRmXrwoF4nNvQe3HzXZhCkSzzFw&s"
+                    //}
 
-                    
+
+
 
 
 
