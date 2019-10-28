@@ -15,6 +15,8 @@ using Microsoft.Extensions.DependencyInjection;
 using BrowseNShop.Interfaces;
 using BrowseNShop.Mocks;
 using BrowseNShop.Data.Repositories;
+using BrowseNShop.Models;
+using Microsoft.Extensions.Logging;
 
 namespace BrowseNShop
 {
@@ -27,6 +29,26 @@ namespace BrowseNShop
 
         public IConfiguration Configuration { get; }
 
+        //public void ConfigureServices(IServiceCollection services)
+        //{
+        //    //Server configuration
+        //    services.AddDbContext<ApplicationDbContext>(options =>
+        //        options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+        //    //Authentication, Identity config
+        //    services.AddIdentity<IdentityUser, IdentityRole>()
+        //        .AddEntityFrameworkStores<ApplicationDbContext>();
+
+        //    services.AddTransient<ICategoryRepository, CategoryRepository>();
+        //    services.AddTransient<ISneakerRepository, SneakerRepository>();
+
+
+
+        //    services.AddMvc();
+        //    services.AddMemoryCache();
+        //    services.AddSession();
+        //}
+
+
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
@@ -36,7 +58,7 @@ namespace BrowseNShop
 
             services.Configure<CookiePolicyOptions>(options =>
             {
-                // This lambda determines whether user consent for non-essential cookies is needed for a given request.
+                //This lambda determines whether user consent for non-essential cookies is needed for a given request.
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
@@ -51,22 +73,30 @@ namespace BrowseNShop
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IServiceProvider serviceProvider)
         {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-                app.UseDatabaseErrorPage();
-            }
-            else
-            {
-                app.UseExceptionHandler("/Home/Error");
-                app.UseHsts();
-            }
 
-            app.UseHttpsRedirection();
+            //if (env.IsDevelopment())
+            //{
+            //    app.UseDeveloperExceptionPage();
+            //    app.UseDatabaseErrorPage();
+            //}
+            //else
+            //{
+            //    app.UseExceptionHandler("/Home/Error");
+            //    app.UseHsts();
+            //}
+
+            //app.UseHttpsRedirection();
+            //app.UseStaticFiles();
+            //app.UseCookiePolicy();
+
+            app.UseDeveloperExceptionPage();
+            app.UseStatusCodePages();
             app.UseStaticFiles();
-            app.UseCookiePolicy();
+            app.UseMvcWithDefaultRoute();
+
+            DbInitializer.Seed(serviceProvider);
 
             app.UseAuthentication();
 
@@ -76,6 +106,9 @@ namespace BrowseNShop
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+
+            
         }
     }
 }
