@@ -14,6 +14,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using BrowseNShop.Interfaces;
 using BrowseNShop.Mocks;
+using BrowseNShop.Data.Repositories;
 
 namespace BrowseNShop
 {
@@ -30,8 +31,8 @@ namespace BrowseNShop
         public void ConfigureServices(IServiceCollection services)
         {
             /**/
-            services.AddTransient<ISneakerRepository, MockSneakerRepository>();
-            services.AddTransient<ICategoryRepository, MockCategoryRepository>();
+            services.AddTransient<ISneakerRepository, SneakerRepository>();
+            services.AddTransient<ICategoryRepository, CategoryRepository>();
 
             services.Configure<CookiePolicyOptions>(options =>
             {

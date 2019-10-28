@@ -57,20 +57,20 @@ namespace BrowseNShop.Mocks
                     },
 
 
-                    new Sneaker
-                    {
-                        Name = "LeBron 3 Houston Oilers",
-                        Price = 150,
-                        ShortDescription = "Houston stand up, and grab the LeBron 3 Houston Oilers ",
-                        LongDescription = "This LBJ 3 comes with a white upper plus blue and red accents, red Nike “Swoosh”, white midsole, and a red sole. These sneakers released in May 2019 and retailed for $175.",
-                        Category = _categoryRepository.Categories.First(),
-                        ImageUrl = "https://stockx.imgix.net/Nike-LeBron-3-Houston-Oilers-2019-Suede.png?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&q=90&trim=color&updated_at=1559141442&w=1000",
-                        InStock = true,
-                        IsPreferred = true,
-                        ImageThumbnailUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5D48SaARSOp_WE8u8BousPhDDQCzQtqodZzZmOXUnDyOU7Vpxhw&s"
+                    //new Sneaker
+                    //{
+                    //    Name = "LeBron 3 Houston Oilers",
+                    //    Price = 150,
+                    //    ShortDescription = "Houston stand up, and grab the LeBron 3 Houston Oilers ",
+                    //    LongDescription = "This LBJ 3 comes with a white upper plus blue and red accents, red Nike “Swoosh”, white midsole, and a red sole. These sneakers released in May 2019 and retailed for $175.",
+                    //    Category = _categoryRepository.Categories.First(),
+                    //    ImageUrl = "https://stockx.imgix.net/Nike-LeBron-3-Houston-Oilers-2019-Suede.png?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&q=90&trim=color&updated_at=1559141442&w=1000",
+                    //    InStock = true,
+                    //    IsPreferred = true,
+                    //    ImageThumbnailUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5D48SaARSOp_WE8u8BousPhDDQCzQtqodZzZmOXUnDyOU7Vpxhw&s"
 
 
-                    },
+                    //},
 
                     new Sneaker
                     {
@@ -142,11 +142,11 @@ namespace BrowseNShop.Mocks
                         IsPreferred = true,
                         ImageThumbnailUrl = "https://richmedia.channeladvisor.com/ImageDelivery/imageService?profileId=12013292&id=634483&recipeId=380"
                     
-                    }
+                    },
 
                     //new Sneaker
                     //{
-                    //    Name = "The North Face Tsumoru Boot",
+                    //    Name = "The North Face Tsumoru",
                     //    Price = 125,
                     //    ShortDescription = "Best Warmth for the Money",
                     //    LongDescription = "Sometimes it’s hard to get your head wrapped around the product line-up from North Face. They have a line of fashion only wear then they have their tough, outdoor gear. Sometimes it’s hard to know which is which. Luckily, most of their boots fall into that outdoor gear category and are quite good for a budget price.",
@@ -154,7 +154,7 @@ namespace BrowseNShop.Mocks
                     //    ImageUrl = "https://images-na.ssl-images-amazon.com/images/I/81UTKwdmdlL._SL600_.jpg",
                     //    InStock = false,
                     //    IsPreferred = true,
-                    //    ImageThumbnailUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjbq5SFTSZzL9hC43-Pa3Qd1OXRmXrwoF4nNvQe3HzXZhCkSzzFw&s"
+                    //    ImageThumbnailUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYr1ZSzHlIsWOQ8v1Vmoy0DjLPAvlKuD0XSlZ6QfzPxBsn-wF7&s"
                     //}
 
 
