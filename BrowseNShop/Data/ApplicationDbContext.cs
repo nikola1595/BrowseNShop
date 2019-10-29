@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using BrowseNShop.Data.Models;
 using BrowseNShop.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -16,6 +17,8 @@ namespace BrowseNShop.Data
 
         public DbSet<Sneaker> Sneakers { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; }
+
 
 
 

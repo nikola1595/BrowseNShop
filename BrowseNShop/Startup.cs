@@ -17,6 +17,7 @@ using BrowseNShop.Mocks;
 using BrowseNShop.Data.Repositories;
 using BrowseNShop.Models;
 using Microsoft.Extensions.Logging;
+using BrowseNShop.Data.Models;
 
 namespace BrowseNShop
 {
@@ -56,6 +57,11 @@ namespace BrowseNShop
             services.AddTransient<ISneakerRepository, SneakerRepository>();
             services.AddTransient<ICategoryRepository, CategoryRepository>();
 
+
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddScoped(sp => ShoppingCart.GetCart(sp));
+
+
             services.Configure<CookiePolicyOptions>(options =>
             {
                 //This lambda determines whether user consent for non-essential cookies is needed for a given request.
@@ -94,6 +100,7 @@ namespace BrowseNShop
             app.UseDeveloperExceptionPage();
             app.UseStatusCodePages();
             app.UseStaticFiles();
+            app.UseSession();
             app.UseMvcWithDefaultRoute();
 
             DbInitializer.Seed(serviceProvider);
