@@ -81,7 +81,7 @@ namespace BrowseNShop.Data
 
                     new Sneaker
                     {
-                        Name = "Adidas Alphaedge 4D",
+                        Name = "Adidas AE 4D",
                         Price = 184,
                         ShortDescription = " Adidas 4D sneakers. ",
                         LongDescription = "The latest glimpse came in May courtesy of the Alphaedge 4D, a sleek knitted sports shoe sat atop a springy, geometric, latticed sole unit. This latest 4D release offers performance updates in the form of reinforced stress points, a Continental rubber outsole and an upper that borrows more than a little from the Alphabounce.",
@@ -111,7 +111,7 @@ namespace BrowseNShop.Data
 
                     new Sneaker
                     {
-                        Name = " Salomon X Ultra Trek GTX",
+                        Name = "Salomon X Ultra Trek GTX",
                         Price = 220,
                         ShortDescription = "Ultralight Winter Boot",
                         LongDescription = "Salomon has gained a huge reputation among those who spend time in bad weather. This is especially true of hikers, backpackers, and mountaineers. A big part of their product line revolves around skiing so they know how to handle cold and wet. This extends into their standard boot lineup.",
@@ -125,7 +125,7 @@ namespace BrowseNShop.Data
 
                     new Sneaker
                     {
-                        Name = "Merrell Phaserbound 2",
+                        Name = "Merrell Phaserbound",
                         Price = 170,
                         ShortDescription = "Most Comfortable Winter Boot",
                         LongDescription = "There should be no doubt that Merrell knows outdoor footwear, maybe better than anyone out there. Though most of their products are more oriented to warm weather activities, some of the boots are designed to be more robust. These make a great winter option that is lightweight and very comfortable.",
