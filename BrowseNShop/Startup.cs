@@ -61,7 +61,7 @@ namespace BrowseNShop
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddScoped(sp => ShoppingCart.GetCart(sp));
 
-
+            services.AddSession();
             services.Configure<CookiePolicyOptions>(options =>
             {
                 //This lambda determines whether user consent for non-essential cookies is needed for a given request.
@@ -82,20 +82,20 @@ namespace BrowseNShop
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, IServiceProvider serviceProvider)
         {
 
-            //if (env.IsDevelopment())
-            //{
-            //    app.UseDeveloperExceptionPage();
-            //    app.UseDatabaseErrorPage();
-            //}
-            //else
-            //{
-            //    app.UseExceptionHandler("/Home/Error");
-            //    app.UseHsts();
-            //}
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+                app.UseDatabaseErrorPage();
+            }
+            else
+            {
+                app.UseExceptionHandler("/Home/Error");
+                app.UseHsts();
+            }
 
-            //app.UseHttpsRedirection();
-            //app.UseStaticFiles();
-            //app.UseCookiePolicy();
+            app.UseHttpsRedirection();
+            
+            app.UseCookiePolicy();
 
             app.UseDeveloperExceptionPage();
             app.UseStatusCodePages();

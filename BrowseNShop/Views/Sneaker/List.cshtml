@@ -12,7 +12,10 @@
 @{ 
     foreach (Sneaker sneaker in Model.Sneakers)
     {
-        @Html.Partial("SneakersSummary", sneaker)
+       
+         @await Html.PartialAsync("SneakersSummary", sneaker)
+        
+            
     }
 }
 

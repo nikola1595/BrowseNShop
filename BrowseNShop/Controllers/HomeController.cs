@@ -5,14 +5,31 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using BrowseNShop.Models;
+using BrowseNShop.Interfaces;
+using BrowseNShop.ViewModels;
 
 namespace BrowseNShop.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+
+
+        private readonly ISneakerRepository _sneakerRepository;
+                
+        public HomeController(ISneakerRepository sneakerRepository)
         {
-            return View();
+            _sneakerRepository = sneakerRepository;
+        }
+
+
+        public ViewResult Index()
+        {
+            var homeVM = new HomeViewModel
+            {
+                PreferredSneakers = _sneakerRepository.PreferredSneakers
+            };
+
+            return View(homeVM);
         }
 
         public IActionResult About()
