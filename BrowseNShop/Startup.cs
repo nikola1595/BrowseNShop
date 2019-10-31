@@ -101,7 +101,7 @@ namespace BrowseNShop
             app.UseStatusCodePages();
             app.UseStaticFiles();
             app.UseSession();
-            app.UseMvcWithDefaultRoute();
+           // app.UseMvcWithDefaultRoute();
 
             DbInitializer.Seed(serviceProvider);
 
@@ -110,9 +110,18 @@ namespace BrowseNShop
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
+                    name: "categoryFilter", 
+                    template: "Sneaker/{action}/{category?}",defaults: new { Controller="Sneaker", action="List"});
+
+
+
+                routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+
+            
 
 
             
