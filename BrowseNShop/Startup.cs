@@ -18,6 +18,7 @@ using BrowseNShop.Data.Repositories;
 using BrowseNShop.Models;
 using Microsoft.Extensions.Logging;
 using BrowseNShop.Data.Models;
+using BrowseNShop.Data.Interfaces;
 
 namespace BrowseNShop
 {
@@ -56,10 +57,14 @@ namespace BrowseNShop
             /**/
             services.AddTransient<ISneakerRepository, SneakerRepository>();
             services.AddTransient<ICategoryRepository, CategoryRepository>();
+            
 
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddScoped(sp => ShoppingCart.GetCart(sp));
+
+            services.AddTransient<IOrderRepository, OrderRepository>();
+
 
             services.AddSession();
             services.Configure<CookiePolicyOptions>(options =>
