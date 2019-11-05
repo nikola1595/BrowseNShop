@@ -55,6 +55,13 @@ namespace BrowseNShop
         public void ConfigureServices(IServiceCollection services)
         {
             /**/
+            services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseSqlServer(
+                    Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDefaultIdentity<IdentityUser>()
+                .AddEntityFrameworkStores<ApplicationDbContext>();
+
+
             services.AddTransient<ISneakerRepository, SneakerRepository>();
             services.AddTransient<ICategoryRepository, CategoryRepository>();
             
@@ -74,11 +81,7 @@ namespace BrowseNShop
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(
-                    Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>()
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+            
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
@@ -106,6 +109,7 @@ namespace BrowseNShop
             app.UseStatusCodePages();
             app.UseStaticFiles();
             app.UseSession();
+            
            // app.UseMvcWithDefaultRoute();
 
             DbInitializer.Seed(serviceProvider);
