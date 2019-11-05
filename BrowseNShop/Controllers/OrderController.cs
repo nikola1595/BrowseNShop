@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using BrowseNShop.Data.Interfaces;
 using BrowseNShop.Data.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BrowseNShop.Controllers
@@ -22,7 +23,7 @@ namespace BrowseNShop.Controllers
 
 
 
-
+        [Authorize]
         public IActionResult Checkout()
         {
             return View();
@@ -51,7 +52,7 @@ namespace BrowseNShop.Controllers
 
         public IActionResult CheckoutComplete()
         {
-            ViewBag.CheckoutCompleteMessage = "Thanks for your order!";
+            ViewBag.CheckoutCompleteMessage = "Thank you for your order!";
             return View();
         }
 
