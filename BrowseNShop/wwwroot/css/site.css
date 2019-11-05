@@ -31,7 +31,7 @@ a.remove {
 
 .center_div {
     margin: 0 auto;
-    width: 100% /* value of your choice which suits your alignment */
+    width: 80% /* value of your choice which suits your alignment */
 }
 
 .marginTop {
@@ -49,22 +49,3 @@ a.remove {
 .carousel img {
     min-width: 100%;
 }
-
-
-.thumbnail {
-    position: relative;
-    float: left;
-    width: 100%;
-    height: 100%;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.col-sm-4-lg-4 col-md-4::after{
-    content: "";
-    clear:both;
-    display:table;
-
-}
-

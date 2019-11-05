@@ -6,11 +6,13 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using BrowseNShop.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace BrowseNShop.Controllers
 {
+    
     public class AccountController : Controller
     {
         private readonly UserManager<IdentityUser> _userManager;
@@ -31,7 +33,7 @@ namespace BrowseNShop.Controllers
             });
         }
 
-
+        [HttpPost]
         public async Task<IActionResult> Login (LoginViewModel loginViewModel)
         {
             if(!ModelState.IsValid)
@@ -78,15 +80,27 @@ namespace BrowseNShop.Controllers
 
                 if(result.Succeeded)
                 {
-                    return RedirectToAction("Index", "Home");
+                    return View("LoggedIn");
+                }
+                else
+                {
+                    foreach(var r in result.Errors)
+                    {
+                        ModelState.AddModelError("", $"{r.Description}");
+                    }
                 }
             }
             return View(loginViewModel);
         }
 
 
+        public ViewResult LoggedIn() => View();
+
+        
+
 
         [HttpPost]
+        
         public async Task<IActionResult> Logout()
         {
             await _signInManager.SignOutAsync();
