@@ -31,17 +31,23 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
 
-                    
+
                     @await Component.InvokeAsync("CategoryMenu")
 
                     @await Component.InvokeAsync("ShoppingCartSummary")
 
                     <li><a asp-area="" asp-controller="Contact" asp-action="Index">Contact</a></li>
 
-                    
 
                 </ul>
                 <partial name="_LoginPartial" />
+                <form class="navbar-form navbar-right" asp-controller="Sneaker" asp-action="Search" method="get">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search for product " name="strSearch" value="@ViewData["strSearch"]" />
+                    </div>
+                </form>
+
+
             </div>
         </div>
     </nav>

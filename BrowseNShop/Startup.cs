@@ -113,7 +113,10 @@ namespace BrowseNShop
             
            // app.UseMvcWithDefaultRoute();
 
+            
+
             DbInitializer.Seed(serviceProvider);
+
 
             app.UseAuthentication();
 

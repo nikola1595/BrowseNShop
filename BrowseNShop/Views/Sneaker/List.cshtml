@@ -3,21 +3,22 @@
 
 
 
-<div>
-    <h2>All sneakers and boots are displayed here </h2>
-</div>
+<div class="row marginTop">
 
-<h2>@Model.CurrentCategory</h2>
 
-@{ 
-    foreach (Sneaker sneaker in Model.Sneakers)
-    {
-       
-         @await Html.PartialAsync("SneakersSummary", sneaker)
-        
-            
+
+    <h2>@Model.CurrentCategory</h2>
+
+    @{
+        foreach (Sneaker sneaker in Model.Sneakers)
+        {
+
+            @await Html.PartialAsync("SneakersSummary", sneaker)
+
+
+        }
     }
-}
+</div>
 
 
 

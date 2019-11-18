@@ -56,6 +56,38 @@ namespace BrowseNShop.Controllers
 
         }
 
+
+        public ViewResult Search(string strSearch)
+        {
+            string _strSearch = strSearch;
+            IEnumerable<Sneaker> sneakers;
+            string currentCategory = string.Empty;
+
+            if(string.IsNullOrEmpty(_strSearch))
+            {
+                sneakers = _sneakerRepository.Sneakers.OrderBy(s => s.SneakerID);
+            }
+            else
+            {
+                sneakers = _sneakerRepository.Sneakers.Where(s => s.Name.ToLower().Contains(_strSearch.ToLower()));
+            }
+
+            return View("~/Views/Sneaker/List.cshtml", new SneakerListViewModel { Sneakers = sneakers, CurrentCategory = "All sneakers and boots" });
+
+        }
+
+
+        public ViewResult Details(int sneakerID)
+        {
+            var sneaker = _sneakerRepository.Sneakers.FirstOrDefault(s => s.SneakerID == sneakerID);
+            if(sneaker == null)
+            {
+                return View("~/Views/Error/Error.cshtml");
+            }
+
+            return View(sneaker);
+        }
+
         
     }
 }

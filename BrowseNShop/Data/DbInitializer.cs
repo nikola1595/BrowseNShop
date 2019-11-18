@@ -1,10 +1,10 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using BrowseNShop.Models;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using BrowseNShop.Models;
 
 namespace BrowseNShop.Data
 {
@@ -64,20 +64,20 @@ namespace BrowseNShop.Data
                     },
 
 
-                    //new Sneaker
-                    //{
-                    //    Name = "LeBron 3 Houston Oilers",
-                    //    Price = 150,
-                    //    ShortDescription = "Houston stand up, and grab the LeBron 3 Houston Oilers ",
-                    //    LongDescription = "This LBJ 3 comes with a white upper plus blue and red accents, red Nike “Swoosh”, white midsole, and a red sole. These sneakers released in May 2019 and retailed for $175.",
-                    //    Category = Categories["Summer Collection"],
-                    //    ImageUrl = "https://stockx.imgix.net/Nike-LeBron-3-Houston-Oilers-2019-Suede.png?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&q=90&trim=color&updated_at=1559141442&w=1000",
-                    //    InStock = true,
-                    //    IsPreferred = true,
-                    //    ImageThumbnailUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5D48SaARSOp_WE8u8BousPhDDQCzQtqodZzZmOXUnDyOU7Vpxhw&s"
+                    new Sneaker
+                    {
+                        Name = "LeBron 3 Houston Oilers",
+                        Price = 150,
+                        ShortDescription = "Houston stand up and grabn LeBron 3 Houston Oilers ",
+                        LongDescription = "This LBJ 3 comes with a white upper plus blue and red accents, red Nike “Swoosh”, white midsole, and a red sole. These sneakers released in May 2019 and retailed for $175.",
+                        Category = Categories["Summer Collection"],
+                        ImageUrl = "https://stockx.imgix.net/Nike-LeBron-3-Houston-Oilers-2019-Suede.png?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&q=90&trim=color&updated_at=1559141442&w=1000",
+                        InStock = true,
+                        IsPreferred = true,
+                        ImageThumbnailUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5D48SaARSOp_WE8u8BousPhDDQCzQtqodZzZmOXUnDyOU7Vpxhw&s"
 
 
-                    //},
+                    },
 
                     new Sneaker
                     {
@@ -95,19 +95,19 @@ namespace BrowseNShop.Data
                     },
 
 
-                    new Sneaker
-                    {
-                        Name = "Danner Powderhorn",
-                        Price = 215,
-                        ShortDescription = "Danner Men's Powderhorn Hunting Shoes",
-                        LongDescription = "These boots are meant for hunting the high country and while they have all the insulation you need, they are a little on the heavy side if you are a distance hiker. For those who hunt anywhere but the wettest locations, water will never be an issue. Solid design and solid leather construction.",
-                        Category = Categories["Winter Collection"],
-                        ImageUrl = "https://images-na.ssl-images-amazon.com/images/I/91zG70PddDL._SL600_.jpg",
-                        InStock = false,
-                        IsPreferred = true,
-                        ImageThumbnailUrl = "https://images-na.ssl-images-amazon.com/images/I/81RbYwVgdpL._AC_UL300_SR300,300_.jpg"
+                    //new Sneaker
+                    //{
+                    //    Name = "Danner Powderhorn",
+                    //    Price = 215,
+                    //    ShortDescription = "Danner Men's Powderhorn Hunting Shoes",
+                    //    LongDescription = "These boots are meant for hunting the high country and while they have all the insulation you need, they are a little on the heavy side if you are a distance hiker. For those who hunt anywhere but the wettest locations, water will never be an issue. Solid design and solid leather construction.",
+                    //    Category = Categories["Winter Collection"],
+                    //    ImageUrl = "https://images-na.ssl-images-amazon.com/images/I/91zG70PddDL._SL600_.jpg",
+                    //    InStock = false,
+                    //    IsPreferred = true,
+                    //    ImageThumbnailUrl = "https://images-na.ssl-images-amazon.com/images/I/81RbYwVgdpL._AC_UL300_SR300,300_.jpg"
 
-                    },
+                    //},
 
                     new Sneaker
                     {
@@ -150,9 +150,13 @@ namespace BrowseNShop.Data
                         ImageThumbnailUrl = "https://richmedia.channeladvisor.com/ImageDelivery/imageService?profileId=12013292&id=634483&recipeId=380"
 
                     }
-                    
+
                 );
             }
+
+            
+            
+
 
             context.SaveChanges();
         }

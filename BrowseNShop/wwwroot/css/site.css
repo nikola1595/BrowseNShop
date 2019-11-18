@@ -49,3 +49,9 @@ a.remove {
 .carousel img {
     min-width: 100%;
 }
+
+
+.img-fluid {
+    max-height: 500px;
+    max-width: 500px;
+}

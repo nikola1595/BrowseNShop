@@ -1,5 +1,6 @@
 ﻿using BrowseNShop.Data.Interfaces;
 using BrowseNShop.Data.Models;
+using BrowseNShop.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,23 +22,33 @@ namespace BrowseNShop.Data.Repositories
         public void CreateOrder(Order order)
         {
             order.OrderPlaced = DateTime.Now;
+            order.OrderTotal = _shoppingCart.GetShoppingTotal();
             _context.Orders.Add(order);
+
 
             var shoppingCartItems = _shoppingCart.ShoppingCartItems;
 
+            
+            
             foreach(var item in shoppingCartItems)
             {
                 var orderDetail = new OrderDetail()
                 {
-                    Amount = item.Amount,
+                    Price = item.Sneaker.Price,
                     SneakerID = item.Sneaker.SneakerID,
                     OrderID = order.OrderID,
-                    Price = item.Sneaker.Price,
-                };
+                    Amount = item.Amount
+
+                      
+                 };
+
+
+                
 
                 _context.OrderDetails.Add(orderDetail);
 
                 
+               
             }
             _context.SaveChanges();
         }
