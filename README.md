@@ -1,2 +1,2 @@
 # BrowseNShop
-## Developing ASP.NET Core MVC e-commerce application for shoes store.
+## ASP.NET Core MVC e-commerce application for shoes store.
