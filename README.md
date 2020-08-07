@@ -1,5 +1,5 @@
 # BrowseNShop
-## ASP.NET Core MVC e-commerce application which is used to buy shoes with shopping cart system and custom  made autorization and authentication.
+## ASP.NET Core MVC e-commerce application which is used to buy shoes with shopping cart system and custom  made authorization and authentication.
 
 
 ## Technologies used:
